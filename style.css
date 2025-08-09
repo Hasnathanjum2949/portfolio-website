@@ -10,6 +10,11 @@
     --white: #fff;
     --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --kaggle-blue: #2196F3;
+    --kaggle-blue-dark: #0d8bf2;
+    --kaggle-card-bg: #e3f2fd;
+    --kaggle-tech-bg: #bbdefb;
+    --kaggle-tech-text: #0d47a1;
 }
 
 * {
@@ -321,6 +326,8 @@ nav ul li a:hover {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -330,6 +337,9 @@ nav ul li a:hover {
 
 .project-content {
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-content h3 {
@@ -349,6 +359,56 @@ nav ul li a:hover {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-size: 14px;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.project-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Kaggle Projects Section */
+.kaggle-projects {
+    background-color: #f9f9f9;
+}
+
+.kaggle-projects .section-title h2::after {
+    background-color: var(--kaggle-blue);
+}
+
+.kaggle-projects .project-card {
+    background-color: var(--kaggle-card-bg);
+}
+
+.kaggle-projects .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.kaggle-projects .project-tech span {
+    background-color: var(--kaggle-tech-bg);
+    color: var(--kaggle-tech-text);
+}
+
+.kaggle-projects .project-btn {
+    background-color: var(--kaggle-blue);
+}
+
+.kaggle-projects .project-btn:hover {
+    background-color: var(--kaggle-blue-dark);
+    transform: translateY(-2px);
 }
 
 /* Education Section */
